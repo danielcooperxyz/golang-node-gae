@@ -4,7 +4,8 @@ RUN apt-get update -y
 
 RUN apt-get upgrade -y
 
-RUN apt-get install nodejs curl -y
+RUN curl -sL https://deb.nodesource.com/setup_8.x | bash - \
+&& apt-get install nodejs curl build-essential -y
 
 ENV HOME /root
 
